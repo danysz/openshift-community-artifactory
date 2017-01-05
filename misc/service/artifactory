@@ -94,7 +94,7 @@ artifactory soft nproc $minNbProcess
 artifactory hard nproc $minNbProcess
 to your /etc/security/limits.conf file."
         fi
-        su -l $ARTIFACTORY_USER -c "$TOMCAT_HOME/bin/startup.sh"
+        su -l $ARTIFACTORY_USER -c "export JAVA_HOME='$JAVA_HOME'; $TOMCAT_HOME/bin/startup.sh"
         RETVAL=$?
         if [ $RETVAL -ne 0 ]; then
             errorArtHome "Artifactory Tomcat server did not start. Please check the logs"
@@ -124,7 +124,7 @@ stop() {
     else
         echo "Stopping Artifactory Tomcat..."
         if [ $SHUTDOWN_PORT -ne 0 ]; then
-            su -l $ARTIFACTORY_USER -c "$TOMCAT_HOME/bin/shutdown.sh"
+            su -l $ARTIFACTORY_USER -c "export JAVA_HOME='$JAVA_HOME'; $TOMCAT_HOME/bin/shutdown.sh"
             RETVAL=$?
         else
             RETVAL=1
