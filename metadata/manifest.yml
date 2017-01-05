@@ -9,7 +9,7 @@ Description: Meet Artifactory, the world’s most advanced repository manager. A
 Version: '4.5.0'
 License: MIT license
 Cartridge-Version: 0.0.1
-Cartridge-Vendor: edsoft-danysz
+Cartridge-Vendor: edsoftdanysz
 Categories:
 - web_framework
 - instant_app
