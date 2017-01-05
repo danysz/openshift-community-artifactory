@@ -4,11 +4,11 @@ This cartridge runs Artifactory on OpenShift (Artifactory requires Java, so you 
 
 ### Clean Installation (new app)
 
-    rhc create-app YOUR_APP_NAME https://cartreflect-claytondev.rhcloud.com/reflect?github=andershedstrom/openshift-community-artifactory https://cartreflect-claytondev.rhcloud.com/reflect?github=andershedstrom/openshift-community-oracle-jdk-8
+    rhc create-app YOUR_APP_NAME https://cartreflect-claytondev.rhcloud.com/reflect?github=danysz/openshift-community-artifactory https://cartreflect-claytondev.rhcloud.com/reflect?github=danysz/openshift-community-oracle-jdk-8
 
 ### Existing app with Java available
 
-    rhc add-cartridge "https://cartreflect-claytondev.rhcloud.com/reflect?github=andershedstrom/openshift-community-artifactory" -a YOUR_APP_NAME
+    rhc add-cartridge "https://cartreflect-claytondev.rhcloud.com/reflect?github=danysz/openshift-community-artifactory" -a YOUR_APP_NAME
 
 
 Give it some time to start up...
